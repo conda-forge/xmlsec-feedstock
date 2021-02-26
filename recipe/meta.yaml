@@ -1,4 +1,4 @@
-{% set version = "1.3.3" %}
+{% set version = "1.3.9" %}
 
 package:
   name: xmlsec
@@ -6,12 +6,12 @@ package:
 
 source:
   url: https://pypi.io/packages/source/x/xmlsec/xmlsec-{{ version }}.tar.gz
-  sha256: e573c0172174973223d874ffd158ecd4e0faa761015474385289a6468dd29ed6
+  sha256: 3d13d7b6cb921dbc4d60d00ad00081a038df73a1e69f5bcc3695deb1bf2093b0
 
 build:
   number: 0
   skip: true  # [win]
-  script: "{{ PYTHON }} -m pip install . -vv"
+  script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
   build:
@@ -36,7 +36,7 @@ about:
   license: MIT
   license_family: MIT
   license_file: LICENSE
-  summary: 'Python bindings for the XML Security Library'
+  summary: Python bindings for the XML Security Library
 
 extra:
   recipe-maintainers:
