@@ -185,4 +185,5 @@ Feedstock Maintainers
 =====================
 
 * [@jaimergp](https://github.com/jaimergp/)
+* [@xhochy](https://github.com/xhochy/)
 
