@@ -23,6 +23,7 @@ requirements:
   host:
     - python
     - pip
+    - pkgconfig
     - lxml >=3.8.0
     - libxml2
     - libxmlsec1
