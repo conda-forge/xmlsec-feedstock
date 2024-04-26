@@ -7,9 +7,6 @@ package:
 source:
   url: https://pypi.io/packages/source/x/xmlsec/xmlsec-{{ version }}.tar.gz
   sha256: 934f804f2f895bcdb86f1eaee236b661013560ee69ec108d29cdd6e5f292a2d9
-  patches:
-    # https://github.com/xmlsec/python-xmlsec/pull/264
-    - 264.patch
 
 build:
   number: 0
