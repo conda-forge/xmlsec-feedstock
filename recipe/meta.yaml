@@ -9,7 +9,7 @@ source:
   sha256: 934f804f2f895bcdb86f1eaee236b661013560ee69ec108d29cdd6e5f292a2d9
 
 build:
-  number: 0
+  number: 1
   skip: true  # [win]
   script: {{ PYTHON }} -m pip install . -vv
 
@@ -20,6 +20,7 @@ requirements:
     - libxmlsec1                             # [build_platform != target_platform]
     - pkg-config
     - {{ compiler('c') }}
+    - {{ stdlib("c") }}
   host:
     - python
     - pip
