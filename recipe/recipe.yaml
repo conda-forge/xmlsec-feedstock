@@ -51,7 +51,7 @@ tests:
         - pip
     script:
       # Check that the correct version is reported by pip
-      - "pip list --format json | grep '{\"name\": \"xmlsec\", \"version\": \"{{ version }}\"}'"
+      - "pip list --format json | grep '{\"name\": \"xmlsec\", \"version\": \"${{ version }}\"}'"
 
 about:
   license: MIT
