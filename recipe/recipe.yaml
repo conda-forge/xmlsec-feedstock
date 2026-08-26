@@ -12,9 +12,9 @@ source:
   sha256: f3fac9ae679f66585925cc00c5f6839ae36c1d03157619571dee18acc05b9c01
 
 build:
-  number: 0
+  number: 1
   skip: win
-  script: ${{ PYTHON }} -m pip install . -vv
+  script: ${{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
 
 requirements:
   build:
@@ -31,7 +31,7 @@ requirements:
     - pip
     - pkgconfig
     - lxml >=3.8.0,!=4.7.0
-    - libxml2
+    - libxml2 <2.14
     - libxmlsec1
     - setuptools
     - setuptools_scm
@@ -46,12 +46,17 @@ tests:
   - python:
       imports:
         - xmlsec
-  - requirements:
+  - files:
+      source:
+        - tests/
+    requirements:
       run:
         - pip
+        - pytest
     script:
       # Check that the correct version is reported by pip
       - "pip list --format json | grep '{\"name\": \"xmlsec\", \"version\": \"${{ version }}\"}'"
+      - pytest
 
 about:
   license: MIT
