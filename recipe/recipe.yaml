@@ -30,7 +30,8 @@ requirements:
     - pip
     - pkgconfig
     - lxml >=3.8.0,!=4.7.0
-    - libxml2
+    # pin to match libxmlsec1 pin below
+    - libxml2 <2.14
     - libxmlsec1
     - setuptools
     - setuptools_scm
